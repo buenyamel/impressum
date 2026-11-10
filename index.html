@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Impressum</title>
+<style>
+  :root {
+    --bg: #0d0b14;
+    --card: #17131f;
+    --text: #ece8f4;
+    --muted: #a59fb5;
+    --line: #2b2538;
+    --a1: #9146ff;
+    --a2: #ff4fa3;
+    --a3: #2fd3c8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .bg span {
+    position: absolute; width: 70vmax; height: 70vmax; border-radius: 50%;
+    opacity: .22; animation: wander 50s ease-in-out infinite alternate;
+  }
+  .bg span:nth-child(1) { background: radial-gradient(circle, var(--a1), transparent 60%); top: -30vmax; left: -20vmax; }
+  .bg span:nth-child(2) { background: radial-gradient(circle, var(--a2), transparent 60%); bottom: -35vmax; right: -25vmax; animation-duration: 58s; }
+  .bg span:nth-child(3) { background: radial-gradient(circle, var(--a3), transparent 60%); top: 30%; left: 40%; opacity: .12; animation-duration: 44s; }
+  @keyframes wander { from { transform: translate(0,0); } to { transform: translate(8vmax, 6vmax); } }
+  @media (prefers-reduced-motion: reduce) { .bg span:nth-child(n) { animation: none; } }
+
+  main { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 {
+    font-size: 2.2rem; line-height: 1.15; margin: 0 0 24px;
+    background: linear-gradient(90deg, var(--a1), var(--a2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 20px; margin-bottom: 16px;
+  }
+  h2 { font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
+  p { margin: 0; overflow-wrap: anywhere; }
+  a { color: var(--a3); }
+  footer { color: var(--muted); font-size: .85rem; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><span></span><span></span><span></span></div>
+<main>
+  <h1>Impressum</h1>
+
+  <section>
+    <h2>Angaben gemäß § 5 DDG</h2>
+    <p>
+      VORNAME NACHNAME<br>
+      c/o NAME DES IMPRESSUM-SERVICE<br>
+      STRASSE NR.<br>
+      PLZ ORT<br>
+      Deutschland
+    </p>
+  </section>
+
+  <section>
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: <a href="mailto:EMAIL@BEISPIEL.DE">EMAIL@BEISPIEL.DE</a><br>
+      Telefon: TELEFONNUMMER
+    </p>
+  </section>
+
+  <section>
+    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <p>VORNAME NACHNAME, Anschrift wie oben</p>
+  </section>
+
+  <section>
+    <h2>Gilt für</h2>
+    <p>
+      Twitch: <a href="https://www.twitch.tv/KANALNAME">twitch.tv/KANALNAME</a><br>
+      sowie die Kanäle auf YouTube, TikTok und Instagram unter dem Namen KANALNAME
+    </p>
+  </section>
+
+  <section>
+    <h2>Streitschlichtung</h2>
+    <p>Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+  </section>
+</main>
+</body>
+</html>
